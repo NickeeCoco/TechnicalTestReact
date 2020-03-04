@@ -1,24 +1,41 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+import EmptyTab from "./pages/EmptyTab"
+import DataTab from "./pages/DataTab"
+
+import Tab from "react-bootstrap/Tab"
+import Row from "react-bootstrap/Row"
+import Col from "react-bootstrap/Col"
+import Nav from "react-bootstrap/Nav"
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Tab.Container defaultActiveKey="first">
+        <Row>
+          <Col sm={1}>
+            <Nav variant="pills" className="flex-column">
+              <Nav.Item>
+                <Nav.Link eventKey="first">Empty Tab</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link eventKey="second">Data</Nav.Link>
+              </Nav.Item>
+            </Nav>
+          </Col>
+          <Col sm={11}>
+            <Tab.Content>
+              <Tab.Pane eventKey="first">
+                <EmptyTab />
+              </Tab.Pane>
+              <Tab.Pane eventKey="second">
+                <DataTab />
+              </Tab.Pane>
+            </Tab.Content>
+          </Col>
+        </Row>
+      </Tab.Container>
     </div>
   );
 }
