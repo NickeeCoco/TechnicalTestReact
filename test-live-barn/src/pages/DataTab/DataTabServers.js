@@ -7,7 +7,7 @@ import Table from "react-bootstrap/Table"
 function DataTabServers() {
   const {filteredVenues} = useContext(Context)
   const serversList = filteredVenues !== undefined && filteredVenues.map(venue => venue.server)
-  
+    
   function createUniqueServersList() {
     let uniqueServersList = []
 
@@ -34,7 +34,7 @@ function DataTabServers() {
     return uniqueServersList
   }
 
-  
+  let finalList = createUniqueServersList()
   
   // const [serversList, setServersList] = useState([])
   // function onlyUnique(value, index, self) {
@@ -59,7 +59,7 @@ function DataTabServers() {
   
     
 
-  const rows = finalServersList.map(server => {
+  const rows = finalList.map(server => {
     return(
       <tr 
         key={server.id} 
@@ -80,7 +80,7 @@ function DataTabServers() {
           </tr>
         </thead>
         <tbody>
-          {/* {rows} */}
+          {rows}
         </tbody>
       </Table>
     </div>
