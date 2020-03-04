@@ -1,12 +1,14 @@
-import React, {useContext, useEffect} from "react"
+import React, {useContext} from "react"
 import {Context} from "../../Context"
 
 import Table from "react-bootstrap/Table"
 
-
 function DataTabServers() {
   const {filteredVenues} = useContext(Context)
   const serversList = filteredVenues !== undefined && filteredVenues.map(venue => venue.server)
+  
+  const {currentVenue} = useContext(Context)
+  const {server: currentVenueServer} = currentVenue !== undefined && currentVenue
     
   function createUniqueServersList() {
     let uniqueServersList = []
@@ -36,33 +38,11 @@ function DataTabServers() {
 
   let finalList = createUniqueServersList()
   
-  // const [serversList, setServersList] = useState([])
-  // function onlyUnique(value, index, self) {
-  //   return self.indexOf(value) === index
-  // }
-
-  // const uniqueServer = servers.filter(onlyUnique)
-
-  // console.log(uniqueServer)
-
-  // useEffect(() => {
-  //   const servers = filteredVenues.map(venue => {
-  //     const currentServerId = venue.server.id
-  //     serversList.map(server => {
-  //       if(server.id === currentServerId) {
-  //         return
-  //       } else {
-  //         setServersList(serversList => [...serversList, venue.server])
-  //       }
-  //     })
-  //   })
-  
-    
-
   const rows = finalList.map(server => {
     return(
       <tr 
-        key={server.id} 
+        key={server.id}
+        className={server.id === currentVenueServer.id ? "bg-info text-white" : null}
       >
         <td>{server.ip4}</td>
         <td>{server.dns}</td>
