@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/TestLiveBarn/static/css/main.402222a9.chunk.css",
+    "main.js": "/TestLiveBarn/static/js/main.56173ff1.chunk.js",
+    "main.js.map": "/TestLiveBarn/static/js/main.56173ff1.chunk.js.map",
+    "runtime-main.js": "/TestLiveBarn/static/js/runtime-main.b84e9397.js",
+    "runtime-main.js.map": "/TestLiveBarn/static/js/runtime-main.b84e9397.js.map",
+    "static/css/2.47e06e2e.chunk.css": "/TestLiveBarn/static/css/2.47e06e2e.chunk.css",
+    "static/js/2.37f90784.chunk.js": "/TestLiveBarn/static/js/2.37f90784.chunk.js",
+    "static/js/2.37f90784.chunk.js.map": "/TestLiveBarn/static/js/2.37f90784.chunk.js.map",
+    "index.html": "/TestLiveBarn/index.html",
+    "precache-manifest.838e281f79541f5af1812c6310f6869f.js": "/TestLiveBarn/precache-manifest.838e281f79541f5af1812c6310f6869f.js",
+    "service-worker.js": "/TestLiveBarn/service-worker.js",
+    "static/css/2.47e06e2e.chunk.css.map": "/TestLiveBarn/static/css/2.47e06e2e.chunk.css.map",
+    "static/css/main.402222a9.chunk.css.map": "/TestLiveBarn/static/css/main.402222a9.chunk.css.map",
+    "static/js/2.37f90784.chunk.js.LICENSE.txt": "/TestLiveBarn/static/js/2.37f90784.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b84e9397.js",
+    "static/css/2.47e06e2e.chunk.css",
+    "static/js/2.37f90784.chunk.js",
+    "static/css/main.402222a9.chunk.css",
+    "static/js/main.56173ff1.chunk.js"
+  ]
+}
