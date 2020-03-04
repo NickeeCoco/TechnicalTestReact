@@ -40,7 +40,6 @@ function DataTabSurfaces() {
         </tbody>
       </Table>
       <MatchesCounter />
-      
     </div>
   )
 }
