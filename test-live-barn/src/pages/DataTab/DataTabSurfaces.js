@@ -6,15 +6,15 @@ import MatchesCounter from "../../components/MatchesCounter"
 import Table from "react-bootstrap/Table"
 
 function DataTabSurfaces() {
-  const {filteredVenues, currentVenue, handleClick} = useContext(Context)
-  const current = currentVenue !== undefined && currentVenue
+  const {filteredVenues, selectedVenue, handleClick} = useContext(Context)
+  const currentVenue = selectedVenue !== undefined && selectedVenue
 
   const rows = filteredVenues.map(venue => {
     return(
       <tr 
         key={venue.id} 
         onClick={() => handleClick(venue.id)}
-        className={venue.id === current.id ? "bg-info text-white" : null}
+        className={venue.id === currentVenue.id ? "bg-info text-white" : null}
       >
         <td>{venue.venueName}</td>
         <td>{venue.surfaceName}</td>

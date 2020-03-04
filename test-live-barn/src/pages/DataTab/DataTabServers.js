@@ -7,8 +7,8 @@ function DataTabServers() {
   const {filteredVenues} = useContext(Context)
   const serversList = filteredVenues !== undefined && filteredVenues.map(venue => venue.server)
   
-  const {currentVenue} = useContext(Context)
-  const {server: currentVenueServer} = currentVenue !== undefined && currentVenue
+  const {selectedVenue} = useContext(Context)
+  const {server: currentVenueServer} = selectedVenue !== undefined && selectedVenue
     
   function createUniqueServersList() {
     let uniqueServersList = []

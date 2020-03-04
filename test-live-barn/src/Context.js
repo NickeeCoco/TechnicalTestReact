@@ -4,7 +4,7 @@ const Context = React.createContext()
 
 function ContextProvider({children}) {
   const [venues, setVenues] = useState([])
-  const [currentVenue, setCurrentVenue] = useState({})
+  const [selectedVenue, setSelectedVenue] = useState({})
   const [filteredVenues, setFilteredVenues] = useState([])
 
   const url = "https://2hsjstzo71.execute-api.us-east-1.amazonaws.com/prod/livebarn-interview-project"
@@ -16,13 +16,13 @@ function ContextProvider({children}) {
   }, [])
 
   useEffect(() => {
-    setCurrentVenue(venues[0])
+    setSelectedVenue(venues[0])
     setFilteredVenues(venues)
   }, [venues])
 
   function handleClick(id) {
     const index = venues.findIndex(venue => venue.id === id)
-    setCurrentVenue(venues[index])
+    setSelectedVenue(venues[index])
   }
 
   function filterVenues(searchValue) {
@@ -31,7 +31,7 @@ function ContextProvider({children}) {
   }
 
   return(
-    <Context.Provider value={{venues, currentVenue, filteredVenues, filterVenues, handleClick}}>
+    <Context.Provider value={{venues, selectedVenue, filteredVenues, filterVenues, handleClick}}>
       {children}
     </Context.Provider>
   )
