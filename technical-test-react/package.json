@@ -1,7 +1,7 @@
 {
   "name": "test-live-barn",
   "version": "0.1.0",
-  "homepage": "https://nickeecoco.github.io/TestLiveBarn/",
+  "homepage": "https://nickeecoco.github.io/TechnicalTestReact/",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
